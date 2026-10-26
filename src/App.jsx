@@ -1,4 +1,7 @@
 import {useState} from 'react'
+import Saldo from './components/Saldo'
+import ListaTransacoes from './components/ListaTransacoes'
+import FormTransacao from './components/FormTransacao'
 
 
 const App = () => {
@@ -34,31 +37,29 @@ const App = () => {
     }
   }
 
+  const excluir = (id) => {
+    const newTransacoes = transacoes.filter((t) => t.id !== id);
+    setTransacoes(newTransacoes);
+  }
 
   return (
     <div>      
       <h1>ola</h1>
-        <label htmlFor="">Descrição - </label>
-        <input placeholder='Descreva o produto' value={desc} onChange={(e) => setDesc(e.target.value)}/>
-        <br />
-        <label htmlFor="">Valor - </label>
-        <input placeholder='Valor do produto' value={valor} onChange={(e) => setValor(e.target.value)} />
-      <ul>
-        {transacoes.map((t  ) => (
-          <li key={t.id}>{t.desc} {t.tipo === 'depósito' ? '+' : '-'} R${t.valor} </li>
-        ))}
-      </ul>
-      <p>O saldo total é: R${total}</p>
-
-      <select value={tipo} onChange={(e) => setTipo(e.target.value)}>
-        <option value="depósito">depósito</option>
-        <option value="pagamento">pagamento</option>
-      </select>
-
-      <button onClick={adicionar} >Adicionar Nova</button>
-
+      <ListaTransacoes  transacoes={transacoes} excluir={excluir}/>
+      <Saldo total={total}/>
+      <FormTransacao 
+        desc={desc}
+        valor={valor}
+        tipo={tipo}
+        adicionar={adicionar}
+        setDesc={setDesc}
+        setTipo={setTipo}
+        setValor={setValor}
+      />
+      
     </div>
   )
 }
 
 export default App
+

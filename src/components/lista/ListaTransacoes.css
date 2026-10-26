@@ -1,0 +1,21 @@
+.lista {
+    list-style: none;
+    padding: 0;
+}
+
+.lista-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+    border-bottom: 1px solid #e2e8f0;
+    font-weight: bold;
+}
+
+.deposito {
+    color: greenyellow;
+}
+
+.pagamento {
+    color: red;
+}

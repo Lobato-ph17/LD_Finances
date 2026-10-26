@@ -1,10 +1,10 @@
+import './FormTransacao.css'
 
 function FormTransacao({desc, valor, tipo, adicionar, setDesc, setTipo, setValor}) {
   return (
-    <div>
+    <div className='form'>
       <label htmlFor="">Descrição - </label>
         <input placeholder='Descreva o produto' value={desc} onChange={(e) => setDesc(e.target.value)}/>
-        <br />
       <label htmlFor="">Valor - </label>
         <input placeholder='Valor do produto' value={valor} onChange={(e) => setValor(e.target.value)} />
 
@@ -13,7 +13,7 @@ function FormTransacao({desc, valor, tipo, adicionar, setDesc, setTipo, setValor
             <option value="pagamento">pagamento</option>
         </select>
 
-      <button onClick={adicionar} >Adicionar Nova</button>
+      <button className='button-form' onClick={adicionar} >ADICIONAR</button>
 
     </div>
   )

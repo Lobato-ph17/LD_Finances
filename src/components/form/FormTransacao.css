@@ -1,0 +1,36 @@
+.form {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.form input, .form select {
+    padding: 15px;
+    border: 1px solid rgb(45, 99, 15);
+    border-radius: 10px;
+    width: 100%;
+}
+
+
+.button-form {
+    padding: 15px 10px;
+    background-color: rgb(45, 99, 15);
+    border-radius: 10px;
+    border: none;
+    color: white;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    font-weight: bold;
+    cursor: pointer;
+    transition: transform 0.2s ease, background-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+.button-form:hover {
+    background-color: rgb(58, 128, 20);
+    transform: translateY(-2px);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.25);
+}
+
+.button-form:active {
+    transform: translateY(0);
+    box-shadow: none;
+}

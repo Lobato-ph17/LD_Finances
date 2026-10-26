@@ -2,9 +2,11 @@
     padding: 20px;
     border-radius: 10px;
     background-color: aliceblue;
+    margin: 15px 0px;
 }
 
 .saldo-valor {
-    font-size: 15px;
+    font-size: 24px;
     font-weight: bold;
+    display: block;
 }

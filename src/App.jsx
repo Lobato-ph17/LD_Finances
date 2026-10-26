@@ -1,7 +1,8 @@
 import {useState} from 'react'
-import Saldo from './components/Saldo'
-import ListaTransacoes from './components/ListaTransacoes'
-import FormTransacao from './components/FormTransacao'
+import Saldo from './components/saldo/Saldo'
+import ListaTransacoes from './components/lista/ListaTransacoes'
+import FormTransacao from './components/form/FormTransacao'
+import './App.css'
 
 
 const App = () => {
@@ -43,8 +44,8 @@ const App = () => {
   }
 
   return (
-    <div>      
-      <h1>ola</h1>
+    <div className='container'>      
+      <h1>Welcome to LD Finances</h1>
       <ListaTransacoes  transacoes={transacoes} excluir={excluir}/>
       <Saldo total={total}/>
       <FormTransacao 

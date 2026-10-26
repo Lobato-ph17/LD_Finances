@@ -1,0 +1,10 @@
+.saldo-card {
+    padding: 20px;
+    border-radius: 10px;
+    background-color: aliceblue;
+}
+
+.saldo-valor {
+    font-size: 15px;
+    font-weight: bold;
+}

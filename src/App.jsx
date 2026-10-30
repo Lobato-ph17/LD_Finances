@@ -3,6 +3,7 @@ import Saldo from './components/saldo/Saldo'
 import ListaTransacoes from './components/lista/ListaTransacoes'
 import FormTransacao from './components/form/FormTransacao'
 import './App.css'
+import Navbar from './components/navbar/Navbar'
 
 
 const App = () => {
@@ -44,21 +45,25 @@ const App = () => {
   }
 
   return (
-    <div className='container'>      
-      <h1>Welcome to LD Finances</h1>
-      <ListaTransacoes  transacoes={transacoes} excluir={excluir}/>
-      <Saldo total={total}/>
-      <FormTransacao 
-        desc={desc}
-        valor={valor}
-        tipo={tipo}
-        adicionar={adicionar}
-        setDesc={setDesc}
-        setTipo={setTipo}
-        setValor={setValor}
-      />
-      
+    <div>
+      <Navbar />
+      <div className='container'>    
+        
+        <h1>Welcome to LD Finances</h1>
+        <ListaTransacoes  transacoes={transacoes} excluir={excluir}/>
+        <Saldo total={total}/>
+        <FormTransacao 
+          desc={desc}
+          valor={valor}
+          tipo={tipo}
+          adicionar={adicionar}
+          setDesc={setDesc}
+          setTipo={setTipo}
+          setValor={setValor}
+        />
+      </div>
     </div>
+
   )
 }
 
